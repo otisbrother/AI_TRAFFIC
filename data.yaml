@@ -1,0 +1,10 @@
+path: dataset
+train: train/images
+val: valid/images
+
+names:
+  0: car
+  1: motorbike
+  2: bicycle
+  3: person
+  4: truck   # hoặc tên đúng của nó
