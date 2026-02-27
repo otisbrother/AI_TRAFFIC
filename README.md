@@ -1,7 +1,18 @@
 🚦 HỆ THỐNG NHẬN DIỆN ĐỐI TƯỢNG GIAO THÔNG SỬ DỤNG YOLOv8
+
 📌 Tổng quan
 
 Dự án xây dựng hệ thống nhận diện các đối tượng giao thông từ hình ảnh thực tế sử dụng mô hình YOLOv8 (Ultralytics).
+
+## Ví dụ IPO hệ thống
+
+| Ảnh gốc (Input) | Ảnh đã nhận diện (Output) |
+|---|---|
+| ![Input](dataset/train/images/aguanambi-1520_png_jpg.rf.fb4d6f2f359c03c48408a8c0f1f62664.jpg) | ![Output](runs/detect/predict/aguanambi-1520_png_jpg.rf.5e27f654cafa062ea3fedaa88072d1df.jpg) |
+
+> Minh họa luồng IPO: Input (ảnh gốc) → Process (YOLOv8 nhận diện) → Output (ảnh đã gán nhãn)
+
+**Lưu ý:** Trong ví dụ output, mô hình đã gán nhãn sai: xe con bị nhận diện là bicycle và xe tải bị nhận diện là motorbike. Nguyên nhân là do mô hình huấn luyện với số epoch thấp, kích thước ảnh nhỏ và chưa sử dụng GPU, dẫn đến hiệu suất nhận diện chưa cao và dễ nhầm lẫn giữa các phương tiện có hình dạng tương tự.
 
 Các lớp đối tượng bao gồm:
 
@@ -131,7 +142,6 @@ Làm việc với dataset YOLO format
 Phân tích trade-off giữa tốc độ và độ chính xác
 
 Thực hành triển khai mô hình từ train đến inference
-
 
 
 
