@@ -132,15 +132,6 @@ Phân tích trade-off giữa tốc độ và độ chính xác
 
 Thực hành triển khai mô hình từ train đến inference
 
-Phiên bản này:
-
-✔ Rõ ràng
-✔ Trung thực về cấu hình train
-✔ Thể hiện tư duy kỹ thuật
-✔ Không “flex ảo”
-✔ Phù hợp đưa vào CV / Portfolio
-
-Nếu bạn muốn mình chỉnh thêm theo hướng “đồ án tốt nghiệp” hoặc “portfolio xin AI Intern” mình nâng cấp thêm cho bạn 🔥
 
 
 
