@@ -1,0 +1,23 @@
+name: Quality checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install lightweight test dependencies
+        run: pip install "PyYAML>=6,<7"
+      - name: Check Python syntax
+        run: python -m py_compile traffic_utils.py train.py evaluate.py predict.py inspect_dataset.py app.py
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Audit dataset labels
+        run: python inspect_dataset.py --strict

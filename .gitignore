@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+.pytest_cache/
+.streamlit/secrets.toml
+dataset/**/*.cache
+runs/detect/traffic-yolov8n*/
+runs/detect/predict*/
+runs/evaluation/
+runs/dataset-report.json
